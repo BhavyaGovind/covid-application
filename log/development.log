@@ -6382,3 +6382,38 @@ Processing by DashBoardController#home as HTML
 Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-04-26 14:32:51 +1000
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhavyasanthu/.rvm/gems/ruby-2.7.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (2.2ms)
+  Rendered dash_board/home.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 208ms (Views: 200.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-26 14:32:55 +1000
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (0.9ms)
+  Rendered dash_board/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-26 14:37:00 +1000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhavyasanthu/.rvm/gems/ruby-2.7.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (1.2ms)
+  Rendered dash_board/home.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 302ms (Views: 294.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-04-26 14:37:08 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/zones.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
