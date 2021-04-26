@@ -1,0 +1,22 @@
+<h1><%= @records.count %></h1>
+<% if false %>
+This is comment
+Code to get keys for table header
+<% end %>
+
+<table>
+  <tr>
+    <% @table_headers.each do |header| %>
+    <th><%= header %></th>
+    <% end %>
+  </tr>
+
+  <% @records.each do |record| %>
+    <tr>
+      <% @table_headers.each do |header| %>
+        <td><%= record[header] %></td>
+      <% end %>
+    </tr>
+  <% end %>
+
+</table>

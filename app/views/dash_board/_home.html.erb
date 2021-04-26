@@ -1,0 +1,22 @@
+<nav>
+  <%= link_to 'Dashboard', root_path, :class => 'anchor'%>
+  <%= link_to 'Covid Zones', covid_zones_path, :class => 'anchor' %>
+  <%= link_to 'Covid Centres', covid_centres_path, :class => 'anchor' %>
+  <%= link_to 'Covid Hospitals', covid_hospitals_path, :class => 'anchor' %>
+  <%= link_to 'My Profile', root_path, :class => 'anchor' %>
+</nav>
+<div id="container">
+  <p>Hi <%= @current_user.email if @current_user.present? %> Please check if you have any symptoms.</p>
+  <%= link_to 'Check Here' %>
+
+  <%= form_tag search_path, :method => 'get' do  %>
+
+    <label>Search</label>
+    <input type="search" name="suburb" placeholder="Enter suburb">
+    <button>Look</button>
+  <% end %>
+</div>
+<aside class="profile_section">
+
+
+</aside>
