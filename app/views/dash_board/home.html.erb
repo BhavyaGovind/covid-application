@@ -19,24 +19,25 @@
         suburb_index = index
     end
    end %>
-  <table>
-    <tr>
-      <tr>
-        <th>Date</th>
-        <th>Postcode</th>
-        <th>Location</th>
-        <th>Suburb</th>
-      </tr>
-    </tr>
-    <% @records.each_with_index do | record, index | %>
-      <% if (record[postcode_index].include? @suburb) || (record[suburb_index].include? @suburb) %>
-        <tr>
-          <td><%= record[date_index] %></td>
-          <td><%= record[postcode_index] %></td>
-          <td><%= record[location_index] %></td>
-          <td><%= record[suburb_index] %></td>
-        </tr>
-      <% end %>
-    <% end %>
-  </table>
+   <div class="center-block fix-width fix-height scroll-inner">
+     <table class="table table-striped">
+       <tr>
+         <th>Date</th>
+         <th>Postcode</th>
+         <th>Location</th>
+         <th>Suburb</th>
+       </tr>
+       <% @records.each_with_index do | record, index | %>
+         <% if (record[postcode_index].include? @suburb) || (record[suburb_index].include? @suburb) %>
+           <tr>
+             <td><%= record[date_index] %></td>
+             <td><%= record[postcode_index] %></td>
+             <td><%= record[location_index] %></td>
+             <td><%= record[suburb_index] %></td>
+           </tr>
+         <% end %>
+       <% end %>
+     </table>
+   </div>
+
 <% end %>

@@ -1,1 +1,24 @@
-<h1><%= "zones comming soon" %></h1>
+<%= render :partial => 'home' %>
+<table>
+  <tr>
+    <th>Suburb Name</th>
+    <th>Zone</th>
+  </tr>
+  <% @suburb_by_cases.keys.each do |suburb| %>
+    <tr>
+      <td><%= suburb %></td>
+      <% if @suburb_by_cases[suburb] < 10 %>
+        <td><%= "Green" %></td>
+      <%  elsif @suburb_by_cases[suburb] < 25 %>
+        <td><%= "Amber" %></td>
+      <% else %>
+        <td><%= "Red" %></td>
+      <% end %>
+    </tr>
+
+
+
+  <% end %>
+
+
+</table>

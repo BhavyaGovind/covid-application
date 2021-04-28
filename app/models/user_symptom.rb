@@ -1,4 +1,4 @@
 class UserSymptom < ApplicationRecord
-  belongs_to :users
-  has_many :symptoms
+  belongs_to :user, :optional => true
+  belongs_to :symptom, :optional => true
 end

@@ -1,6 +1,16 @@
 class CovidController < ApplicationController
 
   def zones
+    url = "https://data.nsw.gov.au/data/datastore/dump/21304414-1ff1-4243-a5d2-f52778048b29?format=json"
+    response = HTTParty.get url
+    result = ActiveSupport::JSON.decode(response)
+    all = result["records"]
+    @suburb_by_cases = Hash.new
+    all.group_by{ |h| h[5] }.each do |loc,cases|
+      puts "'#{loc}': #{cases.length} cases#{:s if cases.length!=1}"
+      @suburb_by_cases[loc] = cases.length
+    end
+
   end
 
   def centres
@@ -14,14 +24,7 @@ class CovidController < ApplicationController
     CSV.parse(response, headers:true) do |row|
       @records.push(row)
     end
-    @table_headers = @records[0].headers
-    
-
-
-
-
-
-
+    @table_headers =["title","Clinic Address (field_clinic_address:address_line1)","Suburb", "Clinic Facility Instruction"]
 
 
   end

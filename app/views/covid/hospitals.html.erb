@@ -1,22 +1,19 @@
-<h1><%= @records.count %></h1>
-<% if false %>
-This is comment
-Code to get keys for table header
-<% end %>
-
-<table>
-  <tr>
-    <% @table_headers.each do |header| %>
-    <th><%= header %></th>
-    <% end %>
-  </tr>
-
-  <% @records.each do |record| %>
+<%= render :partial => 'home' %>
+<div class="center-block fix-width fix-height scroll-inner">
+  <table class="table table-striped">
     <tr>
-      <% @table_headers.each do |header| %>
-        <td><%= record[header] %></td>
+      <% headings = ["Clinic Name","Address","Suburb","Instruction"] %>
+      <% headings.each do |header| %>
+      <th><%= header %></th>
       <% end %>
     </tr>
-  <% end %>
 
-</table>
+    <% @records.each do |row| %>
+      <tr>
+        <% @table_headers.each do |header| %>
+          <td><%= row[header] %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,0 +1,25 @@
+<%= render :partial => 'nav' %>
+<% if @severity == 1  %>
+  <h2>Its normal to have some of the symptoms because of seasonal changes. Dont worry, please follow social distance and wear mask.</h2>
+  <%= image_tag 'normal.jpg', :alt => 'Covid Image' %>
+<% elsif @severity == 2 %>
+  <p>Please isolate yourself  book an appointment to get tested in the below list</p>
+  <table>
+    <tr>
+      <% @table_headers.each do |header| %>
+      <th><%= header %></th>
+      <% end %>
+    </tr>
+    <% @records.each do |row| %>
+      <% if (row['Suburb'] != nil) && (row['Suburb'].include? @current_user.suburb) %>
+        <tr>
+          <% @table_headers.each do |header|%>
+              <td><%= row[header] %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
+<% elsif @severity == 3 %>
+  <p>Please call @1800 022 222 to get immediate help from health service</p>
+<% end %>
