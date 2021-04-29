@@ -15093,3 +15093,188 @@ Processing by CovidController#centres as HTML
 Completed 200 OK in 2264ms (Views: 1780.8ms | ActiveRecord: 13.5ms)
 
 
+Started GET "/" for ::1 at 2021-04-29 10:34:10 +1000
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (576.7ms)
+  Rendered dash_board/home.html.erb within layouts/application (586.7ms)
+Completed 500 Internal Server Error in 619ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `suburb' for nil:NilClass):
+    22:     records = result["records"]
+    23:     @suburb_cases_count = 0
+    24:     records.each do |record|
+    25:       if record[5].include? @current_user.suburb
+    26:         @suburb_cases_count += 1
+    27:       end
+    28:     end %>
+  
+app/views/dash_board/_home.html.erb:25:in `block in _app_views_dash_board__home_html_erb___75651799751309986_69880'
+app/views/dash_board/_home.html.erb:24:in `each'
+app/views/dash_board/_home.html.erb:24:in `_app_views_dash_board__home_html_erb___75651799751309986_69880'
+app/views/dash_board/home.html.erb:3:in `_app_views_dash_board_home_html_erb___1087816575858508792_69860'
+Started GET "/covid_centres" for ::1 at 2021-04-29 10:34:42 +1000
+Processing by CovidController#centres as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering covid/centres.html.erb within layouts/application
+  Rendered covid/_home.html.erb (266.3ms)
+  Rendered covid/centres.html.erb within layouts/application (274.3ms)
+Completed 200 OK in 1006ms (Views: 661.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for ::1 at 2021-04-29 10:34:50 +1000
+Processing by DashBoardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (256.2ms)
+  Rendered dash_board/home.html.erb within layouts/application (258.1ms)
+Completed 200 OK in 309ms (Views: 305.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-04-29 10:35:00 +1000
+Processing by DashBoardController#home as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (305.2ms)
+  Rendered dash_board/home.html.erb within layouts/application (307.1ms)
+Completed 200 OK in 363ms (Views: 357.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-29 10:35:05 +1000
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (241.6ms)
+  Rendered dash_board/home.html.erb within layouts/application (243.1ms)
+Completed 500 Internal Server Error in 246ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `suburb' for nil:NilClass):
+    22:     records = result["records"]
+    23:     @suburb_cases_count = 0
+    24:     records.each do |record|
+    25:       if record[5].include? @current_user.suburb
+    26:         @suburb_cases_count += 1
+    27:       end
+    28:     end %>
+  
+app/views/dash_board/_home.html.erb:25:in `block in _app_views_dash_board__home_html_erb___75651799751309986_70720'
+app/views/dash_board/_home.html.erb:24:in `each'
+app/views/dash_board/_home.html.erb:24:in `_app_views_dash_board__home_html_erb___75651799751309986_70720'
+app/views/dash_board/home.html.erb:3:in `_app_views_dash_board_home_html_erb___1087816575858508792_70700'
+Started PUT "/__web_console/repl_sessions/ce93e6b13e8050fdb0b4409c4120ab20" for ::1 at 2021-04-29 10:35:43 +1000
+Started PUT "/__web_console/repl_sessions/ce93e6b13e8050fdb0b4409c4120ab20" for ::1 at 2021-04-29 10:35:44 +1000
+Started PUT "/__web_console/repl_sessions/ce93e6b13e8050fdb0b4409c4120ab20" for ::1 at 2021-04-29 10:35:51 +1000
+Started PUT "/__web_console/repl_sessions/ce93e6b13e8050fdb0b4409c4120ab20" for ::1 at 2021-04-29 10:35:57 +1000
+Started GET "/" for ::1 at 2021-04-29 10:40:20 +1000
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (1.3ms)
+  Rendered dash_board/home.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/bhavyasanthu/Projects/Covid/app/views/dash_board/_home.html.erb:29: syntax error, unexpected '<', expecting `end'
+      <p>Cases in your suburb area <...
+      ^
+/Users/bhavyasanthu/Projects/Covid/app/views/dash_board/_home.html.erb:29: syntax error, unexpected local variable or method, expecting `end'
+      <p>Cases in your suburb area <%= @suburb_cases_count...
+                       ^~~~~~
+/Users/bhavyasanthu/Projects/Covid/app/views/dash_board/_home.html.erb:38: syntax error, unexpected '<', expecting `end'
+      <p>You are in <%= @zone ;@outp...
+      ^
+/Users/bhavyasanthu/Projects/Covid/app/views/dash_board/_home.html.erb:38: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+      <p>You are in <%= @zone ;@output_buffer...
+             ^~~
+/Users/bhavyasanthu/Projects/Covid/app/views/dash_board/_home.html.erb:51: syntax error, unexpected `ensure', expecting `end'
+          ensure
+          ^~~~~~
+/Users/bhavyasanthu/Projects/Covid/app/views/dash_board/_home.html.erb:53: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/dash_board/_home.html.erb:29: syntax error, unexpected '<', expecting `end'
+app/views/dash_board/_home.html.erb:29: syntax error, unexpected local variable or method, expecting `end'
+app/views/dash_board/_home.html.erb:38: syntax error, unexpected '<', expecting `end'
+app/views/dash_board/_home.html.erb:38: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/dash_board/_home.html.erb:51: syntax error, unexpected `ensure', expecting `end'
+app/views/dash_board/_home.html.erb:53: syntax error, unexpected end-of-input, expecting `end'
+app/views/dash_board/home.html.erb:3:in `_app_views_dash_board_home_html_erb___1087816575858508792_71240'
+Started GET "/" for ::1 at 2021-04-29 10:42:04 +1000
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (1.2ms)
+  Rendered dash_board/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 75ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/symptoms/new" for ::1 at 2021-04-29 10:42:35 +1000
+Processing by SymptomsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :check_for_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-04-29 10:42:35 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-29 10:47:38 +1000
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (1.4ms)
+  Rendered dash_board/home.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 124ms (Views: 122.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-04-29 10:47:40 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 131ms (Views: 126.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-04-29 10:49:17 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 79ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-04-29 10:53:14 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-04-29 10:53:18 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 125ms (Views: 123.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-29 10:53:19 +1000
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (2.1ms)
+  Rendered dash_board/home.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 118ms (Views: 116.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-29 10:54:45 +1000
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (2.3ms)
+  Rendered dash_board/home.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 1071ms (Views: 1067.1ms | ActiveRecord: 0.0ms)
+
+
