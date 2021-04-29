@@ -1,45 +1,33 @@
-
-<nav class="navbar navbar-light" style="background-color: #204379;">
-
-  <%= link_to 'Dashboard', root_path, :class => 'anchor'%>
-  <%= link_to 'Covid Zones', covid_zones_path, :class => 'anchor' %>
-  <%= link_to 'Covid Centres', covid_centres_path, :class => 'anchor' %>
-  <%= link_to 'Covid Hospitals', covid_hospitals_path, :class => 'anchor' %>
-  <%= link_to 'My Profile', root_path, :class => 'anchor' %>
-  <%= form_tag search_path, :method => 'get', :class => 'd-flex' do  %>
-    <input class="form-control me-2" type="search" name="suburb" placeholder="Enter suburb/postcode", aria-label="Search">
-    <button class="btn btn-outline-success" type="submit" >Search</button>
-  <% end %>
-</nav>
 <div id="container">
-
-
   <div class="aside">
-    <%
-    url = "https://data.nsw.gov.au/data/datastore/dump/21304414-1ff1-4243-a5d2-f52778048b29?format=json"
-    response = HTTParty.get url
-    result = ActiveSupport::JSON.decode(response)
-    records = result["records"]
-    @suburb_cases_count = 0
-    records.each do |record|
-      if record[5].include? @current_user.suburb
-        @suburb_cases_count += 1
-      end
-    end %>
-    <p>Cases in your suburb area <%= @suburb_cases_count %></p>
-    <% @zone = ""
-      if @suburb_cases_count < 10
-         @zone = "Green"
-      elsif @suburb_cases_count > 10 && @suburb_cases_count < 25
-          @zone = "Amber"
-      else
-          @zone = "Red"
-      end%>
+    <% if @current_user.present? %>
+      <%
+        url = "https://data.nsw.gov.au/data/datastore/dump/21304414-1ff1-4243-a5d2-f52778048b29?format=json"
+        response = HTTParty.get url
+        result = ActiveSupport::JSON.decode(response)
+        records = result["records"]
+        @suburb_cases_count = 0
+        records.each do |record|
+          if record[5].include? @current_user.suburb
+            @suburb_cases_count += 1
+          end
+      end %>
+      <p>Cases in your suburb  <%= @suburb_cases_count %></p>
+      <% @zone = ""
+        if @suburb_cases_count < 10
+           @zone = "Green"
+        elsif @suburb_cases_count > 10 && @suburb_cases_count < 25
+            @zone = "Amber"
+        else
+            @zone = "Red"
+        end%>
         <p>You are in <%= @zone %> zone</p>
-        <div class="zone">
+        <div class="<%= @zone %>">
 
         </div>
+    <% else %>
+    <p> Please login to check your suburb status </p>
+    <%= link_to 'Login', login_path, :class => "anchor_button" %>
+    <% end %>
   </div>
-  
-
 </div>

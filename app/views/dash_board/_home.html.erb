@@ -1,16 +1,5 @@
 
-<nav class="navbar navbar-light" style="background-color: #204379;">
 
-  <%= link_to 'Dashboard', root_path, :class => 'anchor'%>
-  <%= link_to 'Covid Zones', covid_zones_path, :class => 'anchor' %>
-  <%= link_to 'Covid Centres', covid_centres_path, :class => 'anchor' %>
-  <%= link_to 'Covid Hospitals', covid_hospitals_path, :class => 'anchor' %>
-  <%= link_to 'My Profile', root_path, :class => 'anchor' %>
-  <%= form_tag search_path, :method => 'get', :class => 'd-flex' do  %>
-    <input class="form-control me-2" type="search" name="suburb" placeholder="Enter suburb/postcode", aria-label="Search">
-    <button class="btn btn-outline-success" type="submit" >Search</button>
-  <% end %>
-</nav>
 <div id="container">
 
 
@@ -27,7 +16,7 @@
             @suburb_cases_count += 1
           end
       end %>
-      <p>Cases in your suburb area <%= @suburb_cases_count %></p>
+      <p>Cases in your suburb  <%= @suburb_cases_count %></p>
       <% @zone = ""
         if @suburb_cases_count < 10
            @zone = "Green"

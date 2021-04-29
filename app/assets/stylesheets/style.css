@@ -13,7 +13,7 @@ a{
   color: white;
   text-decoration: none;
   padding: 10px;
-  background: #204379;
+  background: #05104b;
 }
 
 td,th{
@@ -29,7 +29,7 @@ table{
   overflow: scroll;
 }
 .aside{
-  background-color: #204379;
+  background-color: #05104b;
   width : 25%;
   float: right;
   color: white;
@@ -37,6 +37,15 @@ table{
   padding: 20px;
   font-size: 30px;
   font-weight: bold;
+
+}
+.aside_signup, .aside_login{
+  width : 50%;
+  float: right;
+  color: white;
+  height: 100vh;
+  background: url('bg_login.jpg');
+  background-size: cover;
 
 }
 .Green{
@@ -59,7 +68,6 @@ table{
   border: 1px solid white;
   border-radius: 120px;
   background-color: Red;
-
 }
 .fix-width {
 	width: 75vw;
@@ -107,4 +115,14 @@ table{
 }
 .anchor_button{
   background-color: Green;
+}
+.navbar-light .navbar-nav .nav-link{
+color: white;
+}
+
+.navbar-light .navbar-brand{
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color: white
 }
