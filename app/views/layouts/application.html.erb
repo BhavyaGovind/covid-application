@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>POC</title>
+    <title>Covid</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,21 +29,18 @@
           <%= link_to 'Covid Zones', covid_zones_path, :class => 'nav-link' %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Covid Centres', covid_centres_path, :class => 'nav-link' %>
+          <%= link_to 'Covid Centres', covid_graph_path, :class => 'nav-link' %>
         </li>
         <li class="nav-item">
           <%= link_to 'Covid Hospitals', covid_hospitals_path, :class => 'nav-link' %>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+            Account
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
+            <a class="dropdown-item" href="/logout">Logout</a>
+            <a class="dropdown-item" href="/symptoms/new">Edit Profile</a>
         </li>
       </ul>
       <%= form_tag search_path, :method => 'get', :class => 'd-flex' do  %>

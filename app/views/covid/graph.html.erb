@@ -10,8 +10,8 @@
         chartAppearancesConfigObj = {
                         "caption" => "Covid cases from 2019 - Present",
                         "subCaption" => "NSW Suburbs - No.of cases",
-                        "xAxisName" => "Suburb",
-                        "yAxisName" => "Number of Cases",
+                        "yAxisName" => "Suburb",
+                        "xAxisName" => "Number of Cases",
                         "numberSuffix" => "",
                         "theme" => "fusion"
                     }
@@ -41,15 +41,19 @@
 
         # Chart rendering
         chart = Fusioncharts::Chart.new({
-                width: "600",
-                height: "400",
+                width: "75%",
+                height: "600",
                 type: "column2d",
                 renderAt: "chartContainer",
-                dataSource: chartJSONDataStr
+                dataSource: chartJSONDataStr,
+                alignCaptionWithCanvas: "0",
+                xAxisPosition: "right"
             })
 
     end
 %>
-<h3>My First Chart</h3>
-<div id="chartContainer"></div>
-<%=getChart.render() %>
+<div class="graph">
+  <h3>Covid Cases Bar chart </h3>
+  <div id="chartContainer"></div>
+  <%=getChart.render() %>
+</div>

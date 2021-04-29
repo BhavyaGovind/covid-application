@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   resources :symptoms, :only => [:new, :create]
   get '/login' => 'session#new'
   post '/login' => 'session#create'
-  delete '/login' => 'session#destroy'
+  get '/logout' => 'session#destroy'
 
   get '/covid_zones' => 'covid#zones'
-  get '/covid_centres' => 'covid#centres'
+  get '/covid_graph' => 'covid#graph'
   get '/covid_hospitals' => 'covid#hospitals'
 
   get '/search' => 'dash_board#search'

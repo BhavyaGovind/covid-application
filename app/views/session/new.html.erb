@@ -3,19 +3,30 @@
   <div class="aside_login">
 
   </div>
+  <div class="login">
+    <br>
+    <br>
+    <br>
     <h1>Login</h1>
     <% if flash[:error_message] %>
+
       <%= flash[:error_message] %>
     <% end %>
 
     <%= form_tag login_path do %>
       <%= label_tag :email %>
+
       <%= email_field_tag :email %>
-
+      <br>
       <%= label_tag :password %>
-      <%= password_field_tag :password %>
 
+      <%= password_field_tag :password %>
+      <br>
       <%= submit_tag "Sign In" %>
     <% end %>
+    <br>
+    <p> Don't have an account, <span><%= link_to 'Signup here', new_user_path %></span></p>
+  </div>
+
 
 </div>

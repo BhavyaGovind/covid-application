@@ -43,6 +43,7 @@ table{
   width : 50%;
   float: right;
   color: white;
+  display: inline-block;
   height: 100vh;
   background: url('bg_login.jpg');
   background-size: cover;
@@ -123,6 +124,29 @@ color: white;
 .navbar-light .navbar-brand{
   color: white;
 }
-.navbar-light .navbar-nav .nav-link:hover{
-  color: white
+.navbar-nav .nav-item .nav-link:hover{
+  color: white;
+}
+.navbar-light .navbar-brand:hover{
+  color: white;
+}
+.login{
+  text-align: center;
+}
+.symptoms{
+  margin-left: 20px;
+}
+.result{
+  margin: 100px 50px;
+}
+.result_image{
+  margin: 20px 150px;
+}
+h4{
+  text-align: center;
+  color: Red;
+  line-height: 3.6;
+}
+.graph{
+  margin: 50px 30px;
 }

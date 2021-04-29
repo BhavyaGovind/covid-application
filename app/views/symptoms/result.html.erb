@@ -1,25 +1,56 @@
 
 <% if @severity == 1  %>
-  <h2>Its normal to have some of the symptoms because of seasonal changes. Dont worry, please follow social distance and wear mask.</h2>
-  <%= image_tag 'normal.jpg', :alt => 'Covid Image' %>
+  <div class="result">
+    <h4>Note: Its normal to have some of the symptoms because of seasonal changes. Dont worry, please follow social distance and wear mask.</h4>
+    <%= image_tag 'normal.jpg', :alt => 'Covid Image', :class => 'result_image' %>
+  </div>
+
 <% elsif @severity == 2 %>
-  <p>Please isolate yourself  book an appointment to get tested in the below list</p>
-  <table>
-    <tr>
-      <% @table_headers.each do |header| %>
-      <th><%= header %></th>
-      <% end %>
-    </tr>
-    <% @records.each do |row| %>
-      <% if (row['Suburb'] != nil) && (row['Suburb'].include? @current_user.suburb) %>
-        <tr>
-          <% @table_headers.each do |header|%>
-              <td><%= row[header] %></td>
+
+  <div class="result">
+    <h4>Note: Please isolate yourself, and book an appointment to get tested at nearest COVID centers</h4>
+    <% def opening_hours %>
+      <td>
+        <div>
+          <% @records.each do |row| %>
+
           <% end %>
-        </tr>
-      <% end %>
+
+          <span></span>
+        </div>
+      </td>
     <% end %>
-  </table>
+    <table>
+      <tr>
+        <% @headers = ["Name", "Address","Instruction", "Opening hours"] %>
+        <% @headers.each do |header| %>
+        <th><%= header %></th>
+        <% end %>
+      </tr>
+      <% @records.each do |row| %>
+        <% if (row['Suburb'] != nil) && (row['Suburb'].include? @current_user.suburb)
+         @value = "" %>
+          <tr>
+            <% @table_headers.each do |header|
+                 if (header.include? "opening hours")
+                   if row[header] != nil
+                    @value =  @value + header.split[1] + ": " +row[header] + " \n "
+                   end
+                 else %>
+                  <td><%= row[header] %></td>
+                <% end
+            end %>
+            <td style="width: 250px"><%= @value %></td>
+          </tr>
+
+        <% end %>
+      <% end %>
+    </table>
+  </div>
+
 <% elsif @severity == 3 %>
-  <p>Please call @1800 022 222 to get immediate help from health service</p>
+  <div class="result">
+    <h4>Note: Please call @1800 022 222 to get immediate help from health service</h4>
+  </div>
+
 <% end %>
