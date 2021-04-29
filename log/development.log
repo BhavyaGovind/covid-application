@@ -14943,3 +14943,153 @@ Processing by SymptomsController#new as HTML
 Completed 200 OK in 60ms (Views: 55.6ms | ActiveRecord: 2.7ms)
 
 
+Started GET "/symptoms/new" for ::1 at 2021-04-29 09:42:33 +1000
+Processing by SymptomsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering symptoms/new.html.erb within layouts/application
+  Rendered symptoms/_nav.html.erb (0.7ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/symptoms/new.html.erb:2
+  [1m[36mUserSymptom Load (0.3ms)[0m  [1m[34mSELECT "user_symptoms".* FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/symptoms/new.html.erb:5
+  [1m[36mSymptom Load (0.6ms)[0m  [1m[34mSELECT "symptoms".* FROM "symptoms"[0m
+  ↳ app/views/symptoms/new.html.erb:8
+  Rendered symptoms/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 940ms (Views: 934.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/symptoms/new" for ::1 at 2021-04-29 09:43:03 +1000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhavyasanthu/.rvm/gems/ruby-2.7.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by SymptomsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering symptoms/new.html.erb within layouts/application
+  Rendered symptoms/_nav.html.erb (0.9ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/symptoms/new.html.erb:2
+  [1m[36mUserSymptom Load (0.3ms)[0m  [1m[34mSELECT "user_symptoms".* FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/symptoms/new.html.erb:5
+  [1m[36mSymptom Load (0.7ms)[0m  [1m[34mSELECT "symptoms".* FROM "symptoms"[0m
+  ↳ app/views/symptoms/new.html.erb:8
+  Rendered symptoms/new.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 783ms (Views: 728.9ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/symptoms/new" for ::1 at 2021-04-29 09:43:06 +1000
+Processing by SymptomsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering symptoms/new.html.erb within layouts/application
+  Rendered symptoms/_nav.html.erb (0.7ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/symptoms/new.html.erb:2
+  [1m[36mUserSymptom Load (0.3ms)[0m  [1m[34mSELECT "user_symptoms".* FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/symptoms/new.html.erb:5
+  [1m[36mSymptom Load (1.0ms)[0m  [1m[34mSELECT "symptoms".* FROM "symptoms"[0m
+  ↳ app/views/symptoms/new.html.erb:8
+  Rendered symptoms/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 61ms (Views: 56.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/covid_centres" for ::1 at 2021-04-29 09:43:11 +1000
+Processing by CovidController#centres as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering covid/centres.html.erb within layouts/application
+  Rendered covid/_home.html.erb (511.0ms)
+  Rendered covid/centres.html.erb within layouts/application (514.9ms)
+Completed 200 OK in 642ms (Views: 635.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/covid_centres" for ::1 at 2021-04-29 09:48:38 +1000
+Processing by CovidController#centres as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering covid/centres.html.erb within layouts/application
+  Rendered covid/_home.html.erb (229.2ms)
+  Rendered covid/centres.html.erb within layouts/application (234.6ms)
+Completed 500 Internal Server Error in 765ms (ActiveRecord: 41.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `keys' for ["Burwood (A)", 20]:Array):
+    26:         labelValueJSONStr = ""
+    27: 
+    28:         chartDataObj.each {|item|
+    29:             data = labelValueTemplate % [item.keys[0], item[item.keys[0]]]
+    30:             labelValueJSONStr.concat(data)
+    31:         }
+    32: 
+  
+app/views/covid/centres.html.erb:29:in `block in getChart'
+app/views/covid/centres.html.erb:28:in `each'
+app/views/covid/centres.html.erb:28:in `getChart'
+app/views/covid/centres.html.erb:55:in `_app_views_covid_centres_html_erb___1596284663526046570_64100'
+Started GET "/covid_centres" for ::1 at 2021-04-29 09:50:57 +1000
+Processing by CovidController#centres as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 500 Internal Server Error in 357ms (ActiveRecord: 5.4ms)
+
+
+  
+NoMethodError (undefined method `key=' for {}:Hash
+Did you mean?  key
+               key?
+               keys):
+  
+app/controllers/covid_controller.rb:25:in `block in centres'
+app/controllers/covid_controller.rb:22:in `each'
+app/controllers/covid_controller.rb:22:in `centres'
+Started GET "/covid_centres" for ::1 at 2021-04-29 09:56:38 +1000
+Processing by CovidController#centres as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering covid/centres.html.erb within layouts/application
+  Rendered covid/_home.html.erb (352.8ms)
+  Rendered covid/centres.html.erb within layouts/application (357.2ms)
+Completed 200 OK in 873ms (Views: 408.6ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/covid_centres" for ::1 at 2021-04-29 10:12:16 +1000
+Processing by CovidController#centres as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering covid/centres.html.erb within layouts/application
+  Rendered covid/_home.html.erb (707.4ms)
+  Rendered covid/centres.html.erb within layouts/application (711.7ms)
+Completed 200 OK in 2670ms (Views: 2148.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/covid_centres" for ::1 at 2021-04-29 10:12:47 +1000
+Processing by CovidController#centres as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering covid/centres.html.erb within layouts/application
+  Rendered covid/_home.html.erb (333.4ms)
+  Rendered covid/centres.html.erb within layouts/application (337.9ms)
+Completed 200 OK in 829ms (Views: 474.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/covid_centres" for ::1 at 2021-04-29 10:12:54 +1000
+Processing by CovidController#centres as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering covid/centres.html.erb within layouts/application
+  Rendered covid/_home.html.erb (229.9ms)
+  Rendered covid/centres.html.erb within layouts/application (232.8ms)
+Completed 200 OK in 739ms (Views: 306.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/covid_centres" for ::1 at 2021-04-29 10:13:15 +1000
+Processing by CovidController#centres as HTML
+  [1m[36mUser Load (13.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering covid/centres.html.erb within layouts/application
+  Rendered covid/_home.html.erb (320.0ms)
+  Rendered covid/centres.html.erb within layouts/application (323.2ms)
+Completed 200 OK in 2264ms (Views: 1780.8ms | ActiveRecord: 13.5ms)
+
+
