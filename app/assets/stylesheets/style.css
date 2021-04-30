@@ -36,7 +36,7 @@ table{
   height: 100vh;
   padding: 20px;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 200;
 
 }
 .aside_signup, .aside_login{
@@ -79,6 +79,7 @@ table{
   margin: 0 auto;
   color: Red;
 }
+
 .fix-width {
 	width: 75vw;
 	overflow-y: auto;

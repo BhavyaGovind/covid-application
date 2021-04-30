@@ -16,7 +16,8 @@
             @suburb_cases_count += 1
           end
       end %>
-      <p>Cases in your suburb  <%= @suburb_cases_count %></p>
+      <p>Cases in your suburb: </p>
+      <p><%= @suburb_cases_count %></p>
       <% @zone = ""
         if @suburb_cases_count < 10
            @zone = "Green"

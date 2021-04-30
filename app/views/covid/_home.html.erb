@@ -21,7 +21,9 @@
         else
             @zone = "Red"
         end%>
-        <p>Cases in your suburb  <span class="<%= @zone %>"><%= @suburb_cases_count %></span></p>
+        <p>Cases in your suburb: </p>
+        <p><%= @suburb_cases_count %></p>
+        
         <p>You are in <%= @zone %> zone</p>
         <div class="<%= @zone %>">
 

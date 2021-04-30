@@ -21960,3 +21960,67 @@ Processing by SymptomsController#result as HTML
 Completed 200 OK in 148ms (Views: 143.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2021-04-30 11:06:52 +1000
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (0.7ms)
+  Rendered dash_board/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1385ms (Views: 1384.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-04-30 11:06:58 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 91ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-04-30 11:07:18 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PYkcivJc0ojVVFRLv3OdhC6xs5gkO1Tc56BU1wDHSJNh2Ynt5Pgm_dp1IlMkZo5Gl0urDWxu2dP6WIYuRcA07A", "email"=>"test@test.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 283ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2021-04-30 11:07:18 +1000
+Processing by DashBoardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (503.0ms)
+  Rendered dash_board/home.html.erb within layouts/application (504.9ms)
+Completed 200 OK in 634ms (Views: 631.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-04-30 11:07:47 +1000
+Processing by CovidController#zones as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (308.9ms)
+  Rendered covid/zones.html.erb within layouts/application (310.5ms)
+Completed 200 OK in 1045ms (Views: 365.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-04-30 11:11:11 +1000
+Processing by CovidController#zones as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (298.3ms)
+  Rendered covid/zones.html.erb within layouts/application (299.8ms)
+Completed 200 OK in 1520ms (Views: 1198.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-04-30 11:13:21 +1000
+Processing by CovidController#zones as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (212.1ms)
+  Rendered covid/zones.html.erb within layouts/application (214.1ms)
+Completed 200 OK in 1520ms (Views: 1086.8ms | ActiveRecord: 0.6ms)
+
+
