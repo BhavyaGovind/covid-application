@@ -22124,3 +22124,75 @@ Processing by CovidController#zones as HTML
 Completed 200 OK in 627ms (Views: 366.8ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/login" for ::1 at 2021-04-30 11:51:34 +1000
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 89ms (Views: 83.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for ::1 at 2021-04-30 11:51:58 +1000
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 87ms (Views: 80.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/login" for ::1 at 2021-04-30 11:52:32 +1000
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 85ms (Views: 82.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2021-04-30 11:53:36 +1000
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 1437ms (Views: 1433.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2021-04-30 11:53:55 +1000
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1146ms (Views: 1142.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2021-04-30 11:54:13 +1000
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1151ms (Views: 1147.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for ::1 at 2021-04-30 11:54:29 +1000
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1245ms (Views: 1234.1ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/login" for ::1 at 2021-04-30 11:54:57 +1000
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 75ms (Views: 71.5ms | ActiveRecord: 0.5ms)
+
+

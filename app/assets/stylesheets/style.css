@@ -171,3 +171,7 @@ h4{
   margin: 0 120px;
   text-align: left;
 }
+.link{
+  color: red;
+  background-color: inherit;
+}
