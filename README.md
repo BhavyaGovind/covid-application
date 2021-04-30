@@ -1,7 +1,5 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## COVID WEB APPLICATION
+Covid app is built based on NSW data source.And has a checker to covid symptoms and information.
 
 Things you may want to cover:
 

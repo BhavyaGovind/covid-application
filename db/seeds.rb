@@ -1,12 +1,17 @@
 User.destroy_all
 user1 = User.create :email => 'test@test.com', :password => 'test', :suburb => 'Parramatta'
 user2 = User.create :email => 'test1@test1.com', :password => 'test1', :suburb => 'Westmead'
+user3 = User.create :email => 'test2@test2.com', :password => 'test3', :suburb => 'Burwood'
 puts "#{User.count} users created"
 
 Symptom.destroy_all
-fever = Symptom.create :symptom => 'fever'
-cough = Symptom.create :symptom => 'cough'
+fever = Symptom.create :symptom => 'Fever'
+cough = Symptom.create :symptom => 'Cough'
 breathing_problem = Symptom.create :symptom => 'breathing problem'
+sore_throat = Symptom.create :symptom => 'Sore Throat'
+conjunctivitis = Symptom.create :symptom => 'Conjunctivitis'
+other = Symptom.create :symptom => 'loss of speech or movement'
+smell = Symptom.create :symptom => 'loss of taste or smell'
 puts "#{Symptom.count} symptoms created"
 
 UserSymptom.destroy_all
