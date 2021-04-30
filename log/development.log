@@ -21525,3 +21525,438 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 1083ms (Views: 1075.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/covid_zones" for ::1 at 2021-04-30 10:06:31 +1000
+  [1m[35m (41.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhavyasanthu/.rvm/gems/ruby-2.7.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by CovidController#zones as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (311.1ms)
+  Rendered covid/zones.html.erb within layouts/application (314.5ms)
+Completed 200 OK in 1725ms (Views: 1100.7ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/users/new" for ::1 at 2021-04-30 10:06:38 +1000
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 88ms (Views: 81.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for ::1 at 2021-04-30 10:08:17 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"reRmhNuNZYyqkXUsVXj2lOEkEEW8mWBiuQiwJsHOV6xx5q2bh7Iakka0dpkS5DoaM4qWfRtUw6ce-6gSHllk5w", "user"=>{"email"=>"ga@ga.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "suburb"=>"Burwood"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ga@ga.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Create (3.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "suburb", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "ga@ga.com"], ["suburb", "Burwood"], ["password_digest", "$2a$12$ltMqDaGcd8N.cBeGPm0Np.KHdUupArHWlpOpi.H/Gj6uvNMzH4OzG"]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "ga@ga.com"], ["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:12
+Redirected to http://localhost:3000/
+Completed 302 Found in 277ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for ::1 at 2021-04-30 10:08:17 +1000
+Processing by DashBoardController#home as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (260.9ms)
+  Rendered dash_board/home.html.erb within layouts/application (262.7ms)
+Completed 200 OK in 323ms (Views: 318.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/new" for ::1 at 2021-04-30 10:08:35 +1000
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 77ms (Views: 70.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2021-04-30 10:09:12 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NKOU_xxfSpN_YOHAkfvAOwjpjLLFVQ0Dmqxib4M0_-3ooV_gQGA1jZNF4nXWZwy12kcKimKYrsY9X3pbXKPMpg", "user"=>{"email"=>"ga1@ga1.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "suburb"=>"Burwood"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ga1@ga1.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (49.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ga1@ga1.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 475ms (Views: 138.7ms | ActiveRecord: 56.4ms)
+
+
+Started GET "/users/new" for ::1 at 2021-04-30 10:14:15 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 1732ms (Views: 1728.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-04-30 10:14:21 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.9ms)
+  Rendered covid/zones.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 564ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-04-30 10:14:34 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.6ms)
+  Rendered covid/zones.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 1456ms (Views: 1201.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-04-30 10:15:01 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.6ms)
+  Rendered covid/zones.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 413ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-04-30 10:17:48 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/zones.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 1671ms (Views: 1355.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-04-30 10:19:09 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/zones.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1270ms (Views: 922.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-04-30 10:21:02 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (2.1ms)
+  Rendered covid/zones.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 1229ms (Views: 977.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2021-04-30 10:21:48 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NKOU_xxfSpN_YOHAkfvAOwjpjLLFVQ0Dmqxib4M0_-3ooV_gQGA1jZNF4nXWZwy12kcKimKYrsY9X3pbXKPMpg", "user"=>{"email"=>"ga1@ga1.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "suburb"=>"Burwood"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ga1@ga1.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ga1@ga1.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 496ms (Views: 175.1ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/" for ::1 at 2021-04-30 10:21:57 +1000
+Processing by DashBoardController#home as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (274.6ms)
+  Rendered dash_board/home.html.erb within layouts/application (276.7ms)
+Completed 200 OK in 331ms (Views: 325.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/new" for ::1 at 2021-04-30 10:22:05 +1000
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 88ms (Views: 83.1ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/users" for ::1 at 2021-04-30 10:22:40 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rk_l1-lkEIo8AeHCn2o-7X_Nwh0fxyx3g_mz9cCY6OdyTS7ItVtvlNAk4nfY9vJjrWNEJbgKj7IkCqvBHw_brA", "user"=>{"email"=>"haljld@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "suburb"=>"sddff"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "haljld@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "haljld@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 326ms (Views: 53.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2021-04-30 10:26:16 +1000
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (3.2ms)
+  Rendered dash_board/home.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 368ms (Views: 358.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&suburb=2134" for ::1 at 2021-04-30 10:26:22 +1000
+Processing by DashBoardController#search as HTML
+  Parameters: {"utf8"=>"✓", "suburb"=>"2134"}
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (1.4ms)
+  Rendered dash_board/home.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 1239ms (Views: 380.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&suburb=Burwood" for ::1 at 2021-04-30 10:26:37 +1000
+Processing by DashBoardController#search as HTML
+  Parameters: {"utf8"=>"✓", "suburb"=>"Burwood"}
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (0.7ms)
+  Rendered dash_board/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 597ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-04-30 10:26:47 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-04-30 10:39:00 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 1202ms (Views: 1198.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2021-04-30 10:39:04 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-30 10:44:45 +1000
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (1.5ms)
+  Rendered dash_board/home.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 98ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2021-04-30 10:50:15 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rk_l1-lkEIo8AeHCn2o-7X_Nwh0fxyx3g_mz9cCY6OdyTS7ItVtvlNAk4nfY9vJjrWNEJbgKj7IkCqvBHw_brA", "user"=>{"email"=>"haljld@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "suburb"=>"sddff"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "haljld@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "haljld@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 447ms (Views: 109.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2021-04-30 10:50:32 +1000
+Processing by DashBoardController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (391.2ms)
+  Rendered dash_board/home.html.erb within layouts/application (395.7ms)
+Completed 200 OK in 673ms (Views: 668.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/symptoms/new" for ::1 at 2021-04-30 10:50:45 +1000
+Processing by SymptomsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUserSymptom Load (0.9ms)[0m  [1m[34mSELECT "user_symptoms".* FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/controllers/symptoms_controller.rb:52
+  Rendering symptoms/new.html.erb within layouts/application
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/views/symptoms/new.html.erb:3
+  [1m[36mSymptom Load (0.9ms)[0m  [1m[34mSELECT "symptoms".* FROM "symptoms"[0m
+  ↳ app/views/symptoms/new.html.erb:35
+  Rendered symptoms/new.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 223ms (Views: 101.4ms | ActiveRecord: 79.6ms)
+
+
+Started POST "/symptoms" for ::1 at 2021-04-30 10:50:50 +1000
+Processing by SymptomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hvFmvjWsDSoM9gezu_ojyXadr0lJSkC42IQddnlYUzla862haZNyNODTBAb8Zu9HpDMpce6H431_dwVCps9gcg"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Redirected to http://localhost:3000/symptoms/new
+Completed 302 Found in 11ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/symptoms/new" for ::1 at 2021-04-30 10:50:50 +1000
+Processing by SymptomsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUserSymptom Load (0.4ms)[0m  [1m[34mSELECT "user_symptoms".* FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/controllers/symptoms_controller.rb:52
+  Rendering symptoms/new.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/views/symptoms/new.html.erb:3
+  [1m[36mSymptom Load (0.3ms)[0m  [1m[34mSELECT "symptoms".* FROM "symptoms"[0m
+  ↳ app/views/symptoms/new.html.erb:35
+  Rendered symptoms/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 107ms (Views: 100.2ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/symptoms" for ::1 at 2021-04-30 10:50:55 +1000
+Processing by SymptomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L2d5AEDZCHX5AglECMx_lt-pnK8sJlX4tmz9qMAT24rzZbIfHOZ3axUnCvFPULMYDQcal4vr9j0Rn-WcH4TowQ", "symptom"=>["31"]}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/controllers/symptoms_controller.rb:14
+  [1m[36mUserSymptom Load (0.5ms)[0m  [1m[34mSELECT "user_symptoms".* FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/controllers/symptoms_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/symptoms_controller.rb:32
+  [1m[36mUserSymptom Create (4.0ms)[0m  [1m[32mINSERT INTO "user_symptoms" ("symptom_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["symptom_id", 31], ["user_id", 25], ["created_at", "2021-04-30 00:50:55.645350"], ["updated_at", "2021-04-30 00:50:55.645350"]]
+  ↳ app/controllers/symptoms_controller.rb:32
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/symptoms_controller.rb:32
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/controllers/symptoms_controller.rb:36
+Redirected to http://localhost:3000/symptoms/new
+Completed 302 Found in 47ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/symptoms/new" for ::1 at 2021-04-30 10:50:55 +1000
+Processing by SymptomsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUserSymptom Load (40.3ms)[0m  [1m[34mSELECT "user_symptoms".* FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/controllers/symptoms_controller.rb:52
+  Rendering symptoms/new.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/views/symptoms/new.html.erb:3
+  [1m[36mSymptom Load (0.3ms)[0m  [1m[34mSELECT "symptoms".* FROM "symptoms"[0m
+  ↳ app/views/symptoms/new.html.erb:12
+  Rendered symptoms/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 134ms (Views: 78.6ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/symptoms/new" for ::1 at 2021-04-30 10:52:20 +1000
+Processing by SymptomsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUserSymptom Load (5.3ms)[0m  [1m[34mSELECT "user_symptoms".* FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/controllers/symptoms_controller.rb:52
+  Rendering symptoms/new.html.erb within layouts/application
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/views/symptoms/new.html.erb:3
+  [1m[36mSymptom Load (0.5ms)[0m  [1m[34mSELECT "symptoms".* FROM "symptoms"[0m
+  ↳ app/views/symptoms/new.html.erb:12
+  Rendered symptoms/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 2723ms (Views: 2706.0ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/symptoms/new" for ::1 at 2021-04-30 10:52:32 +1000
+Processing by SymptomsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUserSymptom Load (1.9ms)[0m  [1m[34mSELECT "user_symptoms".* FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/controllers/symptoms_controller.rb:52
+  Rendering symptoms/new.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/views/symptoms/new.html.erb:3
+  [1m[36mSymptom Load (2.5ms)[0m  [1m[34mSELECT "symptoms".* FROM "symptoms"[0m
+  ↳ app/views/symptoms/new.html.erb:12
+  Rendered symptoms/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 269ms (Views: 250.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/symptoms/new" for ::1 at 2021-04-30 10:53:56 +1000
+Processing by SymptomsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUserSymptom Load (0.6ms)[0m  [1m[34mSELECT "user_symptoms".* FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/controllers/symptoms_controller.rb:52
+  Rendering symptoms/new.html.erb within layouts/application
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/views/symptoms/new.html.erb:3
+  [1m[36mSymptom Load (1.7ms)[0m  [1m[34mSELECT "symptoms".* FROM "symptoms"[0m
+  ↳ app/views/symptoms/new.html.erb:12
+  Rendered symptoms/new.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 373ms (Views: 358.6ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/symptoms/new" for ::1 at 2021-04-30 10:54:20 +1000
+Processing by SymptomsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUserSymptom Load (1.8ms)[0m  [1m[34mSELECT "user_symptoms".* FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/controllers/symptoms_controller.rb:52
+  Rendering symptoms/new.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_symptoms" WHERE "user_symptoms"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/views/symptoms/new.html.erb:3
+  [1m[36mSymptom Load (46.7ms)[0m  [1m[34mSELECT "symptoms".* FROM "symptoms"[0m
+  ↳ app/views/symptoms/new.html.erb:12
+  Rendered symptoms/new.html.erb within layouts/application (53.1ms)
+Completed 200 OK in 2826ms (Views: 2770.7ms | ActiveRecord: 50.4ms)
+
+
+Started GET "/result?utf8=%E2%9C%93" for ::1 at 2021-04-30 10:54:29 +1000
+Processing by SymptomsController#result as HTML
+  Parameters: {"utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering symptoms/result.html.erb within layouts/application
+  Rendered symptoms/result.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 148ms (Views: 143.9ms | ActiveRecord: 0.3ms)
+
+

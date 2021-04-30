@@ -3,35 +3,35 @@
   <div class="aside_signup">
     <!-- this div is for image  -->
   </div>
+  <% if @user.errors.any? %>
+    <ol>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ol>
+  <% end %>
+  <br>
   <div class="signup">
     <h1>Sign Up</h1>
-    <% if @user.errors.any? %>
-      <ol>
-        <% @user.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ol>
-    <% end %>
-    <br>
     <%= form_for @user do |f|%>
 
     <%= f.label :email %>
     <br>
-    <%= f.email_field :email required!%>
+    <%= f.email_field :email, :required => true %>
     <br>
     <%= f.label :password %>
     <br>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, :required => true %>
     <br>
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation, :required => true %>
     <br>
     <%= f.password_field :password_confirmation%>
     <br>
     <%= f.label :suburb%>
     <br>
-    <%= f.text_field :suburb%>
+    <%= f.text_field :suburb, :required => true%>
     <br>
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", :class => "btn btn-primary" %>
     <% end %>
   </div>
 </div>

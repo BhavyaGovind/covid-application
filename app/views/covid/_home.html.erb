@@ -12,7 +12,7 @@
             @suburb_cases_count += 1
           end
       end %>
-      <p>Cases in your suburb  <%= @suburb_cases_count %></p>
+
       <% @zone = ""
         if @suburb_cases_count < 10
            @zone = "Green"
@@ -21,6 +21,7 @@
         else
             @zone = "Red"
         end%>
+        <p>Cases in your suburb  <span class="<%= @zone %>"><%= @suburb_cases_count %></span></p>
         <p>You are in <%= @zone %> zone</p>
         <div class="<%= @zone %>">
 

@@ -7,7 +7,7 @@
       @symptoms.push(row.symptom_id)
     end %>
     <br>
-    <h4>Select symptoms:</h4>
+    <h4 class="symptoms_h4">Select symptoms:</h4>
     <%= form_tag symptoms_path, :method => 'post' do  %>
       <% Symptom.all.each do |symptom|%>
         <%= check_box_tag "symptom[]", symptom.id, @symptoms.include?(symptom.id)%>
@@ -15,10 +15,10 @@
         <br>
       <% end %>
       <br>
-      <button>Save</button>
+      <button class="btn btn-primary">Save</button>
     <% end %>
     <br>
-    <h4>Select severity:</h4>
+    <h4 class="symptoms_h4">Select severity:</h4>
     <%= form_tag result_path, :method => 'get' do %>
       <input type="radio" name="severity" value="Normal">Normal</input>
       <br>
@@ -27,10 +27,10 @@
       <input type="radio" name="severity" value="Serious">Serious</input>
       <br>
       <br>
-      <button> Submit </button>
+      <button class="btn btn-primary"> Submit </button>
     <% end %>
   <% else%>
-  <p>Select Symptoms:</p>
+  <h4 class="symptoms_h4">Select Symptoms:</h4>
     <%= form_tag symptoms_path, :method => 'post' do  %>
       <% Symptom.all.each do |symptom|%>
         <%= check_box_tag "symptom[]", symptom.id%>
@@ -38,7 +38,7 @@
         <br>
       <% end %>
       <br>
-      <button>Done</button>
+      <button class="btn btn-primary">Done</button>
     <% end %>
   <% end %>
 </div>
