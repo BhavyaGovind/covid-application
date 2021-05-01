@@ -22196,3 +22196,42 @@ Processing by SessionController#new as HTML
 Completed 200 OK in 75ms (Views: 71.5ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2021-04-30 12:14:06 +1000
+Processing by DashBoardController#home as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (372.2ms)
+  Rendered dash_board/home.html.erb within layouts/application (376.6ms)
+Completed 200 OK in 447ms (Views: 441.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2021-04-30 12:14:11 +1000
+Processing by DashBoardController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (333.5ms)
+  Rendered dash_board/home.html.erb within layouts/application (335.8ms)
+Completed 200 OK in 399ms (Views: 397.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2021-04-30 12:14:36 +1000
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 67ms (Views: 63.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-04-30 12:14:39 +1000
+Processing by DashBoardController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (264.9ms)
+  Rendered dash_board/home.html.erb within layouts/application (266.9ms)
+Completed 200 OK in 316ms (Views: 312.2ms | ActiveRecord: 0.9ms)
+
+

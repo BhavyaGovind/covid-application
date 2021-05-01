@@ -1,22 +1,37 @@
 ## COVID WEB APPLICATION
 Covid app is built based on NSW data source.And has a checker to covid symptoms and information.
 
-Things you may want to cover:
+https://covid-21.herokuapp.com/covid_zones
 
-* Ruby version
+It is deployed in Heroku. This application has creating account and saving covid symptoms, checking suburb status and zones
 
-* System dependencies
+Technology stack :
 
-* Configuration
+* Ruby on Rails 5x
 
-* Database creation
+* HTML 5
 
-* Database initialization
+* CSS
 
-* How to run the test suite
+* Bootstrap
 
-* Services (job queues, cache servers, search engines, etc.)
+Assosiations:
 
-* Deployment instructions
+Developed relation between User and user-symptoms(one to many).
 
-* ...
+Used Gems :
+
+* JSON
+
+* HTTParty
+
+* CSV
+
+* open-uri
+
+Features :
+
+This application will allow user to search by suburb and check covid status in their suburb.
+This is achived by reading JSON on cases datalist using JSON.
+
+Hospitals data was achived by reading CSV file.Manipulations were done on the dataresponse to show desired output.
