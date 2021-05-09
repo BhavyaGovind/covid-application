@@ -16,18 +16,7 @@ a{
   background: #05104b;
 }
 
-td,th{
-  border: 1px solid black;
-  text-align: left;
-  padding: 8px;
-}
-th{
-  background-color: #aad2eb;
-}
-table{
-  margin: 0 auto;
-  overflow: scroll;
-}
+
 .aside{
   background-color: #05104b;
   width : 25%;
@@ -79,9 +68,20 @@ table{
   margin: 0 auto;
   color: Red;
 }
-
+td,th{
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+th{
+  background-color: #aad2eb;
+}
+table{
+  margin: 0 auto;
+  overflow: scroll;
+}
 .fix-width {
-	width: 75vw;
+	width: 74vw;
 	overflow-y: auto;
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
@@ -93,7 +93,7 @@ table{
 	-webkit-overflow-scrolling: touch;
 }
 .table {
-	width: 95%;
+	width: 100%;
   margin: 5px 5px 0px 5px;
 	max-width: none;
 }

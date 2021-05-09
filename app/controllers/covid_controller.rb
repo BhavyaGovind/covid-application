@@ -35,7 +35,7 @@ class CovidController < ApplicationController
     CSV.parse(response, headers:true) do |row|
       @records.push(row)
     end
-    @table_headers =["title","Clinic Address (field_clinic_address:address_line1)","Suburb", "Clinic Facility Instruction"]
+
 
 
   end

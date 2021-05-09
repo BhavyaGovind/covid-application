@@ -10,8 +10,13 @@
 
     <% @records.each do |row| %>
       <tr>
+        <% @table_headers =["\xEF\xBB\xBFtitle","Clinic Address (field_clinic_address:address_line1)","Suburb", "Clinic Facility Instruction"] %>
         <% @table_headers.each do |header| %>
-          <td><%= row[header] %></td>
+          <% if header == @table_headers[0] %>
+            <td><%= row[row.headers[0]] %></td>
+          <% else %>
+            <td><%= row[header] %></td>
+          <% end %>
         <% end %>
       </tr>
     <% end %>

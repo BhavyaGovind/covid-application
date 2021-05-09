@@ -22235,3 +22235,536 @@ Processing by DashBoardController#home as HTML
 Completed 200 OK in 316ms (Views: 312.2ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for ::1 at 2021-05-08 14:56:25 +1000
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhavyasanthu/.rvm/gems/ruby-2.7.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (1.4ms)
+  Rendered dash_board/home.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 1371ms (Views: 1355.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&suburb=2134" for ::1 at 2021-05-08 14:56:44 +1000
+Processing by DashBoardController#search as HTML
+  Parameters: {"utf8"=>"✓", "suburb"=>"2134"}
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (1.3ms)
+  Rendered dash_board/home.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 596ms (Views: 159.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&suburb=2134" for ::1 at 2021-05-08 14:56:56 +1000
+Processing by DashBoardController#search as HTML
+  Parameters: {"utf8"=>"✓", "suburb"=>"2134"}
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (1.9ms)
+  Rendered dash_board/home.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 644ms (Views: 183.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&suburb=Burwood" for ::1 at 2021-05-08 14:57:09 +1000
+Processing by DashBoardController#search as HTML
+  Parameters: {"utf8"=>"✓", "suburb"=>"Burwood"}
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (0.8ms)
+  Rendered dash_board/home.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 402ms (Views: 73.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-05-08 14:57:18 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.9ms)
+  Rendered covid/zones.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 458ms (Views: 104.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-05-08 14:59:56 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.6ms)
+  Rendered covid/zones.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 3446ms (Views: 3108.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-05-08 15:00:28 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/zones.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 2541ms (Views: 2058.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-05-08 15:00:52 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (1.3ms)
+  Rendered covid/zones.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 2943ms (Views: 2051.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-05-08 15:01:15 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/zones.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 2670ms (Views: 2238.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-05-08 15:01:46 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (3.0ms)
+  Rendered covid/zones.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 2168ms (Views: 1740.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-05-08 15:02:01 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (1.1ms)
+  Rendered covid/zones.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 2334ms (Views: 1902.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-05-08 15:02:36 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.6ms)
+  Rendered covid/zones.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 2147ms (Views: 1578.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-05-08 15:02:47 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (1.2ms)
+  Rendered covid/zones.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 2077ms (Views: 1706.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-05-08 15:02:59 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (1.0ms)
+  Rendered covid/zones.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 2092ms (Views: 1713.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_zones" for ::1 at 2021-05-08 15:03:09 +1000
+Processing by CovidController#zones as HTML
+  Rendering covid/zones.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.8ms)
+  Rendered covid/zones.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 483ms (Views: 96.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-08 15:03:27 +1000
+Processing by DashBoardController#home as HTML
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (0.8ms)
+  Rendered dash_board/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 89ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&suburb=2134" for ::1 at 2021-05-08 15:03:34 +1000
+Processing by DashBoardController#search as HTML
+  Parameters: {"utf8"=>"✓", "suburb"=>"2134"}
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (1.1ms)
+  Rendered dash_board/home.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 543ms (Views: 147.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&suburb=Burwood" for ::1 at 2021-05-08 15:03:43 +1000
+Processing by DashBoardController#search as HTML
+  Parameters: {"utf8"=>"✓", "suburb"=>"Burwood"}
+  Rendering dash_board/home.html.erb within layouts/application
+  Rendered dash_board/_home.html.erb (0.7ms)
+  Rendered dash_board/home.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 554ms (Views: 111.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/symptoms/new" for ::1 at 2021-05-08 15:05:52 +1000
+Processing by SymptomsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :check_for_login rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-05-08 15:05:52 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 241ms (Views: 236.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_graph" for ::1 at 2021-05-08 15:06:00 +1000
+Processing by CovidController#graph as HTML
+  Rendering covid/graph.html.erb within layouts/application
+  Rendered covid/_home.html.erb (3.3ms)
+  Rendered covid/graph.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 602ms (Views: 203.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-08 15:06:06 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.8ms)
+  Rendered covid/hospitals.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 342ms (Views: 112.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-08 15:30:35 +1000
+Processing by CovidController#hospitals as HTML
+Completed 500 Internal Server Error in 283ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (hell):
+  
+app/controllers/covid_controller.rb:39:in `hospitals'
+Started PUT "/__web_console/repl_sessions/535fc841d804d5e24c828df78f0d2cc6" for ::1 at 2021-05-08 15:31:14 +1000
+Started PUT "/__web_console/repl_sessions/535fc841d804d5e24c828df78f0d2cc6" for ::1 at 2021-05-08 15:31:25 +1000
+Started PUT "/__web_console/repl_sessions/535fc841d804d5e24c828df78f0d2cc6" for ::1 at 2021-05-08 15:32:00 +1000
+Started PUT "/__web_console/repl_sessions/535fc841d804d5e24c828df78f0d2cc6" for ::1 at 2021-05-08 15:32:12 +1000
+Started PUT "/__web_console/repl_sessions/535fc841d804d5e24c828df78f0d2cc6" for ::1 at 2021-05-08 15:32:14 +1000
+Started PUT "/__web_console/repl_sessions/535fc841d804d5e24c828df78f0d2cc6" for ::1 at 2021-05-08 15:32:46 +1000
+Started PUT "/__web_console/repl_sessions/535fc841d804d5e24c828df78f0d2cc6" for ::1 at 2021-05-08 15:32:51 +1000
+Started PUT "/__web_console/repl_sessions/535fc841d804d5e24c828df78f0d2cc6" for ::1 at 2021-05-08 15:33:04 +1000
+Started PUT "/__web_console/repl_sessions/535fc841d804d5e24c828df78f0d2cc6" for ::1 at 2021-05-08 15:33:17 +1000
+Started PUT "/__web_console/repl_sessions/535fc841d804d5e24c828df78f0d2cc6" for ::1 at 2021-05-08 15:33:25 +1000
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:32:03 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (2.0ms)
+  Rendered covid/hospitals.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 620ms (Views: 364.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:33:44 +1000
+Processing by CovidController#hospitals as HTML
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (hell):
+  
+app/controllers/covid_controller.rb:42:in `block (2 levels) in hospitals'
+app/controllers/covid_controller.rb:40:in `each'
+app/controllers/covid_controller.rb:40:in `block in hospitals'
+app/controllers/covid_controller.rb:39:in `each'
+app/controllers/covid_controller.rb:39:in `hospitals'
+Started PUT "/__web_console/repl_sessions/0f92fde7aafb57aac95d7cce653c7cb9" for ::1 at 2021-05-09 09:33:50 +1000
+Started PUT "/__web_console/repl_sessions/0f92fde7aafb57aac95d7cce653c7cb9" for ::1 at 2021-05-09 09:33:50 +1000
+Started PUT "/__web_console/repl_sessions/0f92fde7aafb57aac95d7cce653c7cb9" for ::1 at 2021-05-09 09:33:58 +1000
+Started PUT "/__web_console/repl_sessions/0f92fde7aafb57aac95d7cce653c7cb9" for ::1 at 2021-05-09 09:34:08 +1000
+Started PUT "/__web_console/repl_sessions/0f92fde7aafb57aac95d7cce653c7cb9" for ::1 at 2021-05-09 09:34:12 +1000
+Started PUT "/__web_console/repl_sessions/0f92fde7aafb57aac95d7cce653c7cb9" for ::1 at 2021-05-09 09:34:58 +1000
+Started PUT "/__web_console/repl_sessions/0f92fde7aafb57aac95d7cce653c7cb9" for ::1 at 2021-05-09 09:35:06 +1000
+Started PUT "/__web_console/repl_sessions/0f92fde7aafb57aac95d7cce653c7cb9" for ::1 at 2021-05-09 09:35:28 +1000
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:36:05 +1000
+Processing by CovidController#hospitals as HTML
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (hell):
+  
+app/controllers/covid_controller.rb:38:in `hospitals'
+Started PUT "/__web_console/repl_sessions/c7de1f858f3a7bd50aa274f19640239d" for ::1 at 2021-05-09 09:36:10 +1000
+Started PUT "/__web_console/repl_sessions/c7de1f858f3a7bd50aa274f19640239d" for ::1 at 2021-05-09 09:36:13 +1000
+Started PUT "/__web_console/repl_sessions/c7de1f858f3a7bd50aa274f19640239d" for ::1 at 2021-05-09 09:36:23 +1000
+Started PUT "/__web_console/repl_sessions/c7de1f858f3a7bd50aa274f19640239d" for ::1 at 2021-05-09 09:36:25 +1000
+Started PUT "/__web_console/repl_sessions/c7de1f858f3a7bd50aa274f19640239d" for ::1 at 2021-05-09 09:37:31 +1000
+Started PUT "/__web_console/repl_sessions/c7de1f858f3a7bd50aa274f19640239d" for ::1 at 2021-05-09 09:37:39 +1000
+Started PUT "/__web_console/repl_sessions/c7de1f858f3a7bd50aa274f19640239d" for ::1 at 2021-05-09 09:37:49 +1000
+Started PUT "/__web_console/repl_sessions/c7de1f858f3a7bd50aa274f19640239d" for ::1 at 2021-05-09 09:38:06 +1000
+Started PUT "/__web_console/repl_sessions/c7de1f858f3a7bd50aa274f19640239d" for ::1 at 2021-05-09 09:38:11 +1000
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:39:16 +1000
+Processing by CovidController#hospitals as HTML
+Completed 500 Internal Server Error in 235ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (hell):
+  
+app/controllers/covid_controller.rb:38:in `hospitals'
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:39:33 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/hospitals.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 359ms (Views: 100.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:40:20 +1000
+Processing by CovidController#hospitals as HTML
+Completed 500 Internal Server Error in 383ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (hell):
+  
+app/controllers/covid_controller.rb:38:in `hospitals'
+Started PUT "/__web_console/repl_sessions/eab75f249b375c4deeca2ea5971ee2ac" for ::1 at 2021-05-09 09:40:25 +1000
+Started PUT "/__web_console/repl_sessions/eab75f249b375c4deeca2ea5971ee2ac" for ::1 at 2021-05-09 09:40:26 +1000
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:40:55 +1000
+Processing by CovidController#hospitals as HTML
+Completed 500 Internal Server Error in 327ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (hell):
+  
+app/controllers/covid_controller.rb:43:in `block (2 levels) in hospitals'
+app/controllers/covid_controller.rb:41:in `each'
+app/controllers/covid_controller.rb:41:in `block in hospitals'
+app/controllers/covid_controller.rb:40:in `each'
+app/controllers/covid_controller.rb:40:in `hospitals'
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:40:59 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:40:59 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:41:25 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:41:35 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:42:25 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:42:47 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:42:51 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:43:10 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:43:12 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:43:18 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:43:40 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:43:41 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:43:48 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:43:56 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:44:06 +1000
+Started PUT "/__web_console/repl_sessions/1f383be254960160e42bb405e123d2e0" for ::1 at 2021-05-09 09:44:17 +1000
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:45:13 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/hospitals.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 515ms (Views: 105.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:45:51 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.8ms)
+  Rendered covid/hospitals.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 664ms (Views: 417.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:46:09 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (1.0ms)
+  Rendered covid/hospitals.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 643ms (Views: 370.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:47:23 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/hospitals.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 386ms (Views: 141.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:48:05 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/hospitals.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <% @table_headers.each do |header| %>
+    14:         <%= @table_headers[0]%>
+    15:         
+    16:           <td><%= row[header] %></td>
+    17:         <% end %>
+    18:       </tr>
+    19:     <% end %>
+  
+app/views/covid/hospitals.html.erb:16:in `block (2 levels) in _app_views_covid_hospitals_html_erb__1180022922805648427_85760'
+app/views/covid/hospitals.html.erb:13:in `each'
+app/views/covid/hospitals.html.erb:13:in `block in _app_views_covid_hospitals_html_erb__1180022922805648427_85760'
+app/views/covid/hospitals.html.erb:11:in `each'
+app/views/covid/hospitals.html.erb:11:in `_app_views_covid_hospitals_html_erb__1180022922805648427_85760'
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:48:55 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/hospitals.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 338ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:49:43 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.9ms)
+  Rendered covid/hospitals.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 487ms (Views: 157.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:50:40 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.8ms)
+  Rendered covid/hospitals.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 360ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:50:54 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (1.1ms)
+  Rendered covid/hospitals.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 325ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:51:56 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (7.5ms)
+  Rendered covid/hospitals.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 523ms (Views: 217.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:52:24 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/hospitals.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/bhavyasanthu/Projects/Covid/app/views/covid/hospitals.html.erb:15: syntax error, unexpected string literal, expecting ')'
+...ppend=( row[table_headers[0]] "This is nil");@output_buffer....
+...                              ^
+):
+  
+app/views/covid/hospitals.html.erb:15: syntax error, unexpected string literal, expecting ')'
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:52:48 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (1.9ms)
+  Rendered covid/hospitals.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 363ms (Views: 113.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:53:40 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/hospitals.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 400ms (Views: 195.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:54:46 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (1.0ms)
+  Rendered covid/hospitals.html.erb within layouts/application (126.2ms)
+Completed 200 OK in 632ms (Views: 312.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:55:25 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (1.0ms)
+  Rendered covid/hospitals.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 611ms (Views: 371.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:56:07 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/hospitals.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 322ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:57:07 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (2.3ms)
+  Rendered covid/hospitals.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 551ms (Views: 297.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:57:35 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.8ms)
+  Rendered covid/hospitals.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 328ms (Views: 118.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 09:59:56 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/hospitals.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 368ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 10:00:26 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (1.1ms)
+  Rendered covid/hospitals.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 380ms (Views: 102.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 10:01:04 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (2.0ms)
+  Rendered covid/hospitals.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 361ms (Views: 101.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 10:01:59 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.6ms)
+  Rendered covid/hospitals.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 367ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 10:02:20 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.6ms)
+  Rendered covid/hospitals.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 372ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 10:02:55 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/hospitals.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 317ms (Views: 102.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 10:03:17 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (0.7ms)
+  Rendered covid/hospitals.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 490ms (Views: 200.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/covid_hospitals" for ::1 at 2021-05-09 10:06:10 +1000
+Processing by CovidController#hospitals as HTML
+  Rendering covid/hospitals.html.erb within layouts/application
+  Rendered covid/_home.html.erb (1.3ms)
+  Rendered covid/hospitals.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 328ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
