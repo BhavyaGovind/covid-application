@@ -8,11 +8,10 @@
         records = result["records"]
         @suburb_cases_count = 0
         records.each do |record|
-          if record[5].include? @current_user.suburb
+          if record[5].include? @current_user.suburb.capitalize()
             @suburb_cases_count += 1
           end
       end %>
-
       <% @zone = ""
         if @suburb_cases_count < 10
            @zone = "Green"
@@ -23,7 +22,7 @@
         end%>
         <p>Cases in your suburb: </p>
         <p><%= @suburb_cases_count %></p>
-        
+
         <p>You are in <%= @zone %> zone</p>
         <div class="<%= @zone %>">
 

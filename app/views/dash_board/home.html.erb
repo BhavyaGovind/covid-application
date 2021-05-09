@@ -28,7 +28,7 @@
          <th>Suburb</th>
        </tr>
        <% @records.each_with_index do | record, index | %>
-         <% if (record[postcode_index].include? @suburb) || (record[suburb_index].include? @suburb) %>
+         <% if (record[postcode_index].include? @suburb) || (record[suburb_index].include? @suburb.capitalize()) %>
            <tr>
              <td><%= record[date_index] %></td>
              <td><%= record[postcode_index] %></td>

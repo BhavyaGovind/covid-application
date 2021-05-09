@@ -37,7 +37,16 @@
                     @value =  @value + header.split[1] + ": " +row[header] + " \n "
                    end
                  else %>
-                  <td><%= row[header] %></td>
+                  <% if header == @table_headers[0] %>
+                    <td><%= row[row.headers[0]] %>
+                      <br />
+                      <% lat = row[row.headers[2]] %>
+                      <% long = row[row.headers[1]] %>
+                      <a id="no_background" href="  https://maps.google.com/?q=<%= lat  %>,<%= long %>"> Directions</a></td>
+
+                  <% else %>
+                    <td><%= row[header] %></td>
+                  <% end %>
                 <% end
             end %>
             <td style="width: 250px"><%= @value %></td>

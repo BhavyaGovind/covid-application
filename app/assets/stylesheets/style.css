@@ -15,7 +15,12 @@ a{
   padding: 10px;
   background: #05104b;
 }
-
+#no_background{
+  background-color: inherit;
+  text-decoration: underline;
+  padding-top: 10px;
+  color: #05104b;
+}
 
 .aside{
   background-color: #05104b;

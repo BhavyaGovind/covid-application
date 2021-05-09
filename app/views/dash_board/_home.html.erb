@@ -12,7 +12,7 @@
         records = result["records"]
         @suburb_cases_count = 0
         records.each do |record|
-          if record[5].include? @current_user.suburb
+          if record[5].include? @current_user.suburb.capitalize()
             @suburb_cases_count += 1
           end
       end %>
